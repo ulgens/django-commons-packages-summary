@@ -27,35 +27,24 @@ from prettytable import PrettyTable, TableStyle
 
 DETAILS: dict[str, dict[str, str]] = {
     # "project": {
-    #     "pypi": "python-example",  # only needed if different from "project"
-    #     "slug": "org/example",  # only needed if different from "hugovk/{project}"
+    #     # Only needed if different from "project"
+    #     "pypi": "python-example",
+    #     # Only needed if different from "django-commons/{project}"
+    #     "slug": "org/example",
     # },
-    "Pillow": {"slug": "python-pillow/Pillow"},
-    "pylast": {"slug": "pylast/pylast"},
-    "pypistats": {},
-    "pypinfo": {"slug": "ofek/pypinfo"},
-    "norwegianblue": {},
-    "pepotron": {},
-    "termcolor": {"slug": "termcolor/termcolor"},
-    "humanize": {"slug": "python-humanize/humanize"},
-    "PrettyTable": {"slug": "prettytable/prettytable"},
-    "Tablib": {"slug": "jazzband/tablib"},
-    "UltraJSON": {"pypi": "ujson", "slug": "ultrajson/ultrajson"},
-    "OSMViz": {"slug": "hugovk/osmviz"},
-    "tinytext": {},
-    "em-keyboard": {},
-    "stravavis": {"slug": "marcusvolz/strava_py"},
-    "flake8-implicit-str-concat": {
-        "slug": "flake8-implicit-str-concat/flake8-implicit-str-concat"
-    },
-    "Sphinx Lint": {"pypi": "sphinx-lint", "slug": "sphinx-contrib/sphinx-lint"},
-    "linkotron": {},
-    "blurb": {"slug": "python/blurb"},
-    "Python Docs Sphinx Theme": {
-        "pypi": "python-docs-theme",
-        "slug": "python/python-docs-theme",
-    },
-    "cherry-picker": {"slug": "python/cherry-picker"},
+    "axe-selenium-python": {},
+    "django-click": {},
+    "django-cookie-consent": {},
+    "django-debug-toolbar": {},
+    "django-enum": {},
+    "django-fsm-2": {},
+    "django-prometheus": {},
+    "django-simple-history": {},
+    "django-tailwind-cli": {},
+    "django-tasks-scheduler": {},
+    "django-typer": {},
+    "django-valkey": {},
+    "drf-excel": {},
 }
 
 
@@ -78,7 +67,7 @@ def update_readme(output: str) -> None:
 
 def badger(project: str) -> list[str]:
     pypi = DETAILS[project].get("pypi", project)
-    slug = DETAILS[project].get("slug", f"hugovk/{project}")
+    slug = DETAILS[project].get("slug", f"django-commons/{project}")
     url = f"https://github.com/{slug}"
 
     return [
