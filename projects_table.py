@@ -38,11 +38,13 @@ DETAILS: dict[str, dict[str, str]] = {
     "django-debug-toolbar": {},
     "django-enum": {},
     "django-fsm-2": {},
+    "django-polymorphic": {},
     "django-prometheus": {},
     "django-simple-history": {},
     "django-tailwind-cli": {},
     "django-tasks-scheduler": {},
     "django-typer": {},
+    "django-unicorn": {},
     "django-valkey": {},
     "drf-excel": {},
 }
