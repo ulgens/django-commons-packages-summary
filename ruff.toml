@@ -32,4 +32,3 @@ per-file-ignores."tests/**/*.py" = [
 flake8-import-conventions.aliases.datetime = "dt"
 flake8-import-conventions.banned-from = [ "datetime" ]
 isort.known-first-party = [ "tinytext" ]
-isort.required-imports = [ "from __future__ import annotations" ]

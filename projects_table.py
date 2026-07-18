@@ -19,8 +19,6 @@ To update README.md:
 > uv run python projects_table.py --update
 """
 
-from __future__ import annotations
-
 import argparse
 
 from tabulate import tabulate
