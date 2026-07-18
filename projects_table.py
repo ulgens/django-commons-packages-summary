@@ -4,19 +4,19 @@ Generate a table of maintained projects
 With thanks to https://github.com/gaborbernat/gaborbernat/
 
 To print to console:
-
-Put your projects in DETAILS
-python3 -m pip install "prettytable >= 1"
-python3 projects_table.py
+* First, put your projects in DETAILS
+* Then run
+> uv sync
+> uv run python projects_table.py
 
 To update README.md:
 
-Place these markers in README.md where you want the table:
-
+* Place these markers in README.md where you want the table:
 [start_generated]: # (start_generated)
 [end_generated]: # (end_generated)
 
-python3 projects_table.py --update
+* Then run
+> uv run python projects_table.py --update
 """
 
 from __future__ import annotations
