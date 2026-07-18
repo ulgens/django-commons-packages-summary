@@ -23,8 +23,12 @@ repos:
       - id: debug-statements
       - id: end-of-file-fixer
       - id: forbid-submodules
-      - id: requirements-txt-fixer
       - id: trailing-whitespace
+
+  - repo: https://github.com/astral-sh/uv-pre-commit
+    rev: 0.11.29
+    hooks:
+      - id: uv-lock
 
   - repo: https://github.com/python-jsonschema/check-jsonschema
     rev: 0.37.4
