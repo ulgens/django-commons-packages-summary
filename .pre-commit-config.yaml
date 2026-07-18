@@ -1,10 +1,4 @@
 repos:
-  - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.15.22
-    hooks:
-      - id: ruff-check
-        args: [--exit-non-zero-on-fix]
-
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v6.0.0
     hooks:
@@ -19,10 +13,26 @@ repos:
       - id: forbid-submodules
       - id: trailing-whitespace
 
+  - repo: https://github.com/tox-dev/pyproject-fmt
+    rev: v2.25.3
+    hooks:
+      - id: pyproject-fmt
+
+  - repo: https://github.com/abravalheri/validate-pyproject
+    rev: v0.25
+    hooks:
+      - id: validate-pyproject
+
   - repo: https://github.com/astral-sh/uv-pre-commit
     rev: 0.11.29
     hooks:
       - id: uv-lock
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.15.22
+    hooks:
+      - id: ruff-check
+        args: [--exit-non-zero-on-fix]
 
   - repo: https://github.com/python-jsonschema/check-jsonschema
     rev: 0.37.4
@@ -40,16 +50,6 @@ repos:
     rev: v1.27.0
     hooks:
       - id: zizmor
-
-  - repo: https://github.com/tox-dev/pyproject-fmt
-    rev: v2.25.3
-    hooks:
-      - id: pyproject-fmt
-
-  - repo: https://github.com/abravalheri/validate-pyproject
-    rev: v0.25
-    hooks:
-      - id: validate-pyproject
 
   - repo: meta
     hooks:
