@@ -23,7 +23,7 @@ from __future__ import annotations
 
 import argparse
 
-from prettytable import PrettyTable, TableStyle
+from tabulate import tabulate
 
 DETAILS: dict[str, dict[str, str]] = {
     # "project": {
@@ -82,9 +82,8 @@ def badger(project: str) -> list[str]:
     ]
 
 
-def projects_table() -> PrettyTable:
-    table = PrettyTable()
-    table.field_names = [
+def projects_table() -> str:
+    headers = [
         "Project",
         "Release",
         "Python versions",
@@ -92,13 +91,8 @@ def projects_table() -> PrettyTable:
         "Activity",
         "Downloads",
     ]
-    table.align = "l"
-    table.set_style(TableStyle.MARKDOWN)
-
-    for project in DETAILS:
-        table.add_row(badger(project))
-
-    return table
+    rows = [badger(project) for project in DETAILS]
+    return tabulate(rows, headers=headers, tablefmt="github", disable_numparse=True)
 
 
 class CustomFormatter(
@@ -121,12 +115,12 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    table = projects_table()
+    output = projects_table()
 
     if args.update:
-        update_readme(table.get_string())
+        update_readme(output)
     else:
-        print(table)
+        print(output)
 
 
 if __name__ == "__main__":
