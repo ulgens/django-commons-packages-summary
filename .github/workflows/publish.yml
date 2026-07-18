@@ -6,6 +6,12 @@ on:
       - main
   workflow_dispatch:
 
+permissions: {}
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 env:
   # renovate: datasource=python-version depName=python
   PYTHON_VERSION: 3.14
@@ -14,8 +20,9 @@ env:
 
 jobs:
   publish:
+    name: Publish
     permissions:
-      contents: write
+      contents: write  # Needed to push the updated README table
     runs-on: ubuntu-24.04
     timeout-minutes: 5
 

@@ -9,12 +9,17 @@ on:
 
 permissions: {}
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 env:
   FORCE_COLOR: 1
   RUFF_OUTPUT_FORMAT: github
 
 jobs:
   lint:
+    name: prek run --all-files
     runs-on: ubuntu-24.04
 
     steps:
