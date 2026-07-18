@@ -110,10 +110,14 @@ class CustomFormatter(
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description=__doc__, formatter_class=CustomFormatter
+        description=__doc__,
+        formatter_class=CustomFormatter,
     )
     parser.add_argument(
-        "-u", "--update", action="store_true", help="Update README.md with table"
+        "-u",
+        "--update",
+        action="store_true",
+        help="Update README.md with table",
     )
     args = parser.parse_args()
 
