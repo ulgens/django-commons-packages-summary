@@ -40,7 +40,10 @@ repos:
     hooks:
       - id: check-github-workflows
       - id: check-renovate
-        additional_dependencies: [ 'pyjson5' ]
+        files: ^renovate.json5$
+        language: python
+        additional_dependencies:
+          - pyjson5==2.0.1
 
   - repo: https://github.com/rhysd/actionlint
     rev: v1.7.12
