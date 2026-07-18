@@ -1,8 +1,6 @@
-Python open-source maintainer, CPython
-[core developer](https://devguide.python.org/core-developers/responsibilities/) and
-[PEP editor](https://peps.python.org/pep-0001/#pep-editor-responsibilities-workflow).
+High level maintenance summary for packages under [django-commons](https://django-commons.org/) organization.
 
-Some projects I maintain or co-maintain:
+> Django Commons is an organization dedicated to supporting the community's efforts to maintain packages. It seeks to improve the maintenance experience for all contributors; reducing the barrier to entry for new contributors and reducing overhead for existing maintainers.
 
 [start_generated]: # (start_generated)
 
@@ -25,24 +23,3 @@ Some projects I maintain or co-maintain:
 | [drf-excel](https://github.com/django-commons/drf-excel)                           | [![PyPI version](https://img.shields.io/pypi/v/drf-excel?style=flat-square)](https://pypi.org/project/drf-excel)                           | [![Supported Python versions](https://img.shields.io/pypi/pyversions/drf-excel.svg?style=flat-square)](https://pypi.org/project/drf-excel/)                           | [![Supported Django versions](https://img.shields.io/pypi/frameworkversions/django/drf-excel?style=flat-square)](https://pypi.org/project/drf-excel/)                           | [![GitHub last commit](https://img.shields.io/github/last-commit/django-commons/drf-excel?style=flat-square)](https://github.com/django-commons/drf-excel/commits)                           | [![PyPI downloads](https://img.shields.io/pypi/dm/drf-excel?style=flat-square)](https://pypistats.org/packages/drf-excel)                           |
 
 [end_generated]: # (end_generated)
-
-Some small sites:
-
-* [Python logos](https://hugovk.github.io/python-logos/)
-* [Top PyPI Packages](https://hugovk.github.io/top-pypi-packages/)
-* [Python Steering Council](https://hugovk.github.io/python-steering-council/)
-* [Python Core Developers](https://hugovk.github.io/python-core-devs/)
-* [PyPI downloads](https://hugovk.github.io/pypi-tools/charts)
-* [Helcitybikometer](https://citybikes.github.io/)
-* [How big is an explorer tile?](https://hugovk.github.io/tiles/)
-* [Transcontinental Race](https://hugovk.github.io/transconrace/)
-* [Wiktionary tools](https://hugovk.github.io/wiktionary-tools/)
-* [— – …](https://hugovk.github.io/copy/)
-* [Year progress bar](https://hugovk.github.io/year-progress-bar/)
-* [CHERNOBYL PROGRESS BAR](https://hugovk.github.io/chernobyl-progress-bar/)
-* [Helometer](https://hugovk.github.io/helometer/)
-* [Am I north of the Watford Gap?](https://hugovk.github.io/aminorthofthewatfordgap/)
-* [Am I south of the Watford Gap?](https://hugovk.github.io/amisouthofthewatfordgap/)
-* [Finnish words for bear](https://hugovk.github.io/finnish-bear-words/)
-
-[![hugovk's GitHub stats](https://github-readme-stats.vercel.app/api?username=hugovk&count_private=true&show_icons=true)](https://github.com/anuraghazra/github-readme-stats)
