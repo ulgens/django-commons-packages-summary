@@ -1,0 +1,20 @@
+[project]
+name = "django-commons-packages-summary"
+version = "0.1.0"
+description = "Summary of packages maintained under django-commons organization"
+authors = [
+    { name = "Ülgen Sarıkavak", email = "foss@ulgenwanders.net" },
+]
+requires-python = "==3.14.*"
+classifiers = [
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.14",
+]
+dependencies = [
+    "prettytable==3.18.0",
+]
+
+[tool.uv]
+# The earliest version that supports the current lock file revision
+required-version = ">=0.8.4"
+package = false
