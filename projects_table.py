@@ -51,18 +51,25 @@ DETAILS: dict[str, dict[str, str]] = {
 
 
 def update_readme(output: str) -> None:
-    with open("README.md") as f:
+    with open("README.md", encoding="utf-8") as f:
         contents = f.read()
 
     before, delim1, _ = contents.partition("[start_generated]: # (start_generated)\n")
     _, delim2, after = contents.partition("[end_generated]: # (end_generated)\n")
+
+    if not delim1:
+        msg = "Missing start_generated marker in README.md"
+        raise SystemExit(msg)
+    if not delim2:
+        msg = "Missing end_generated marker in README.md"
+        raise SystemExit(msg)
 
     new_contents = before + delim1 + "\n" + output + "\n\n" + delim2 + after
 
     if contents == new_contents:
         print("No changes to README.md")
     else:
-        with open("README.md", "w") as f:
+        with open("README.md", "w", encoding="utf-8") as f:
             f.write(new_contents)
         print("README.md updated")
 

@@ -2,17 +2,29 @@
 name = "django-commons-packages-summary"
 version = "0.1.0"
 description = "Summary of packages maintained under django-commons organization"
+license = { text = "MIT" }
 authors = [
     { name = "Ülgen Sarıkavak", email = "foss@ulgenwanders.net" },
 ]
 requires-python = "==3.14.*"
 classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Framework :: Django",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
     "Programming Language :: Python :: 3 :: Only",
     "Programming Language :: Python :: 3.14",
 ]
 dependencies = [
     "tabulate==0.10.0",
 ]
+
+[project.urls]
+Homepage = "https://github.com/django-commons/django-commons-packages-summary"
+Repository = "https://github.com/django-commons/django-commons-packages-summary"
+Issues = "https://github.com/django-commons/django-commons-packages-summary/issues"
 
 [tool.uv]
 # The earliest version that supports the current lock file revision

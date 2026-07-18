@@ -2,6 +2,8 @@ fix = true
 
 [lint]
 select = [
+  "ARG",    # flake8-unused-arguments
+  "B",      # flake8-bugbear
   "C4",     # flake8-comprehensions
   "E",      # pycodestyle errors
   "EM",     # flake8-errmsg
@@ -11,11 +13,15 @@ select = [
   "ISC",    # flake8-implicit-str-concat
   "LOG",    # flake8-logging
   "PGH",    # pygrep-hooks
-  "PT",     # flake8-pytest-style
   "PYI",    # flake8-pyi
+  "RUF009", # mutable-argument-default
+  "RUF012", # mutable-class-default
+  "RUF015", # unnecessary-iterable-allocation
   "RUF022", # unsorted-dunder-all
   "RUF100", # unused noqa (yesqa)
+  "RUF039", # unraw-re-pattern
   "S",      # flake8-bandit
+  "SIM",    # flake8-simplify
   "UP",     # pyupgrade
   "W",      # pycodestyle warnings
   "YTT",    # flake8-2020
@@ -31,5 +37,5 @@ per-file-ignores."tests/**/*.py" = [
 ]
 flake8-import-conventions.aliases.datetime = "dt"
 flake8-import-conventions.banned-from = [ "datetime" ]
-isort.known-first-party = [ "tinytext" ]
+isort.known-first-party = [ "projects_table" ]
 isort.required-imports = [ "from __future__ import annotations" ]
