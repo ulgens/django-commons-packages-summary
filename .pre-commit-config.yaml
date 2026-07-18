@@ -54,6 +54,7 @@ repos:
     rev: v1.27.0
     hooks:
       - id: zizmor
+        args: ["--no-progress"]
 
   - repo: meta
     hooks:
