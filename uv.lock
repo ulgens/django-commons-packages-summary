@@ -11,7 +11,7 @@ dependencies = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "tabulate", specifier = ">=0.9" }]
+requires-dist = [{ name = "tabulate", specifier = "==0.10.0" }]
 
 [[package]]
 name = "tabulate"
